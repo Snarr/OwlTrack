@@ -1,0 +1,17 @@
+{
+  "name": "owltrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "image-to-base64": "^2.1.1",
+    "twit": "^2.2.11",
+    "unsplash-js": "^6.3.0"
+  }
+}
