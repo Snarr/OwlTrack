@@ -1,6 +1,6 @@
 # OwlTrack 🦉
 
-<p align="center" width="350" height="350">
+<p align="center">
     <img src="https://github.com/Snarr/OwlTrack/blob/media/screenshot-700x700.png?raw=true" />
 </p>
 
