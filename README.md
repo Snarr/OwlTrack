@@ -1,5 +1,9 @@
 # OwlTrack 🦉
 
+<p align="center" width="350" height="350">
+    <img src="https://github.com/Snarr/OwlTrack/blob/media/screenshot-700x700.png?raw=true" />
+</p>
+
 A Twitter bot that posts when active cases are discovered on Temple University's COVID-19 dashboard.
 
 ### How it works
