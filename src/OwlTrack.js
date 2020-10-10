@@ -42,7 +42,7 @@ async function getLocalData() {
 
 async function tweetUpdates(difference, total) {
 	let formattedDifference = (difference<0?"":"+") + difference;
-	let term = "case" + (Math.abs(difference)>1?"":"s")
+	let term = "case" + (Math.abs(difference)>1?"s":"")
 
 	let photo, buffer;
 	try {
