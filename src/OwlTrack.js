@@ -3,8 +3,9 @@ const twitter = require('./Twit');
 const unsplash = require('./Unsplash')
 const Colors = require('./Colors');
 
+const Puppeteer = require('./Puppeteer.js');
+
 const fsPromises = require('fs').promises;
-const axios = require('axios');
 const imageToBase64 = require('image-to-base64');
 
 const fetch = require('node-fetch');
@@ -14,17 +15,14 @@ const OwlTrack = () => {
 	Colors.log("OwlTrack started!", "green");
 
 	setInterval(async () => {
-		let response = await axios.get(`${config.api.url}?wrapAPIKey=${config.api.key}`);
-	
-		data = response.data.data;
-		totalCases = data.total[0].total;
+		let totalCases = await Puppeteer();
 	
 		let oldCases = await getLocalData();
-		let totalOldCases = oldCases.total[0].total;
+		let totalOldCases = oldCases.total;
 	
 		if (totalCases != totalOldCases) {
 			Colors.log('change in case numbers', "cyan");
-			await fsPromises.writeFile('./data.json', JSON.stringify(data));
+			await fsPromises.writeFile('./data.json', JSON.stringify({"total": totalCases}));
 			let difference = totalCases - totalOldCases;
 			await tweetUpdates(difference, totalCases);
 		} else {
