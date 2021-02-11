@@ -8,7 +8,7 @@ A Twitter bot that posts when active cases are discovered on Temple University's
 
 ### How it works
 
-- Application grabs case data from web scraping API since the COVID-19 Dashboard does not have any public API endpoints.
+- Application grabs case data from the COVID-19 dashboard by controlling a headless browser instance w/ Puppeteer
 
 - Applications pulls random "owl" images from Unsplash's random image API.
 
